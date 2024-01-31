@@ -1,0 +1,58 @@
+<!-- 7,a.Write a JavaScript program to read the employee data(name,id,salary and commision) from form and display the data in a table with total salary(salary+commision) (HTML page) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+</head>
+
+<body>
+    <form id="employeeForm" align="center">
+        <h2>Employee Data Form</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required><br><br>
+
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" required><br><br>
+
+        <label for="commission">Commission:</label>
+        <input type="number" id="commission" name="commission" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("employeeForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get form values
+            const name = document.getElementById("name").value;
+            const id = document.getElementById("id").value;
+            const salary = parseFloat(document.getElementById("salary").value);
+            const commission = parseFloat(document.getElementById("commission").value);
+
+            // Calculate total salary
+            const totalSalary = salary + commission;
+            // Calculate total marks
+
+            // Display information in a table
+            var resultTable = `<table border=1 align="center">`;
+            resultTable += "<tr><th>Name</th><th>ID</th><th>Salary</th><th>Commission</th><th>Total salary</th></tr>";
+            resultTable += "<tr><td>" + name + "</td><td>" + id + "</td><td>" + salary + "</td><td>" + commission + "</td><td>" + totalSalary + "</td></tr>";
+            resultTable += "</table>";
+
+            // Display the result
+            document.getElementById("result").innerHTML = resultTable;
+        });
+    </script>
+
+</body>
+
+</html>

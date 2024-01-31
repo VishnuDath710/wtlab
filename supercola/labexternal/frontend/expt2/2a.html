@@ -1,0 +1,69 @@
+<!-- 2,a.Write a JavaScript program that takes name, rollno, marks(sub1 and sub2) from user from a form and on form submission displays them in a tabular format, with total marks(sub1+sub2) ( like a marks sheet) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Sheet</title>
+    <!-- <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style> -->
+</head>
+<body>
+
+<form id="marksForm" align="center">
+    <h2><b>Marks Sheet</b></h2><br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="rollNo">Roll Number:</label>
+    <input type="text" id="rollNo" name="rollNo" required><br><br>
+
+    <label for="sub1">Marks in Subject 1:</label>
+    <input type="number" id="sub1" name="sub1" required><br><br>
+
+    <label for="sub2">Marks in Subject 2:</label>
+    <input type="number" id="sub2" name="sub2" required><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<div id="result"></div>
+
+<script>
+    document.getElementById("marksForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Get form values
+        var name = document.getElementById("name").value;
+        var rollNo = document.getElementById("rollNo").value;
+        var sub1 = parseInt(document.getElementById("sub1").value);
+        var sub2 = parseInt(document.getElementById("sub2").value);
+
+        // Calculate total marks
+        var totalMarks = sub1 + sub2;
+
+        // Display information in a table
+        var resultTable = `<table border=1 align="center">`;
+        resultTable += "<tr><th>Name</th><th>Roll Number</th><th>Subject 1</th><th>Subject 2</th><th>Total Marks</th></tr>";
+        resultTable += "<tr><td>" + name + "</td><td>" + rollNo + "</td><td>" + sub1 + "</td><td>" + sub2 + "</td><td>" + totalMarks + "</td></tr>";
+        resultTable += "</table>";
+
+        // Display the result
+        document.getElementById("result").innerHTML = resultTable;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="submitForm(event)">
+        <label for="name">Enter user name</label>
+        <input type="text" name="name" id="name"><br><br>
+        <label for="passkey">Enter password</label>
+        <input type="password" name="passkey" id="passkey"><br><br>
+        <button type="submit">delete user</button>
+    </form>
+    <div id="noob"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        async function submitForm(event) {
+            event.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                passkey: document.getElementById('passkey').value,
+            };
+
+            try {
+                const response = await axios.post('http://localhost:8000/delete', formData);
+                document.getElementById('noob').innerHTML = response.data;
+                console.log(response.data);
+            } catch (error) {
+                console.error('Error submitting form:', error);
+            }
+        }
+    </script>
+</body>
+</html>

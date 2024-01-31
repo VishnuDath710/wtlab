@@ -1,0 +1,32 @@
+Design an Express application integrated with MongoDB that includes a user registration page and a feature to display all registered users, retrieving and rendering the user data from a MongoDB database.
+
+
+a.Write a JavaScript program that takes name, rollno, marks(sub1 and sub2) from user from a form and on form submission displays them in a tabular format, with total marks(sub1+sub2) ( like a marks sheet)
+b.Create a Webpage of your current semester TimeTable, it should be in center (Apply rowspan,colspan when it needed)  
+
+
+Design an Express application integrated with MongoDB that includes a user registration page and integrate a functionality to modify user data in an Express application using MongoDB, ensuring that the changes are reflected in the database.
+
+
+a.Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity)
+b.Create a Wegpage  contains all type of text formats,all elements,typography,form,table,footer,images,links,lists,
+
+
+
+a.Write a JavaScript program to find the most frequent item of an array
+b.Create a Responsive E-Commerce website for mobiles using bootstrap Cards & Grids
+
+
+Design an Express application integrated with MongoDB that includes a user registration page and integrating a delete user page, ensuring that user data is removed from the database upon deletion.
+
+
+
+a.Write a JavaScript program to read the employee data(name,id,salary and commision) from form and display the data in a table with total salary(salary+commision) (HTML page)
+b.Create a Static Student Registration form using set of form components like text fields,passwords,radio buttons,check boxes,  textarea, selections, formfield with legend, etc.
+
+a.Write a JavaScript program which accepts a string as input and swaps the case of each character. For example, if you input 'The Quick Brown Fox' the output should be 'tHEqUICKbROWNfOX'.
+b.Create menubar for your index.html webpage that contains the menu items like Home,Projects,Education,Assignments
+
+
+
+Design an Express application integrated with MongoDB that includes a user registration page and a login page to securely store user credentials and authenticate users.
