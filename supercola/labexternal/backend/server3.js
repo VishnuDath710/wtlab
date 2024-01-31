@@ -34,7 +34,7 @@ const myschema = new mongoose.Schema({
     }
 });
 
-let mymodel = new mongoose.model('rasengan', myschema);
+let mymodel = new mongoose.model('doc3', myschema);
 
 app.post('/register', (req, res) => {
     const userData = req.body;

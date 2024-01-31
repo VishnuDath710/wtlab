@@ -30,7 +30,7 @@ const myschema = new mongoose.Schema({
     }
 });
 
-let mymodel = new mongoose.model('regpage', myschema);
+let mymodel = new mongoose.model('doc1', myschema);
 
 app.post('/register', (req, res) => {
     const userData = req.body;
