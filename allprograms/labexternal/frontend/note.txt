@@ -1,0 +1,3 @@
+if we run experiment 1 run server1.js and home.html 
+if it is direct one then run it directly
+use server experiment no.. 
